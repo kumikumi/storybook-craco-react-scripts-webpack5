@@ -6,7 +6,7 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/preset-create-react-app"
+    "storybook-preset-craco" // changing this line to "@storybook/preset-create-react-app" fixes storybook build
   ],
   "framework": "@storybook/react",
   "core": {
