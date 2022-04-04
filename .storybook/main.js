@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   "stories": [
     "../src/**/*.stories.mdx",
@@ -6,7 +8,12 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "storybook-preset-craco" // changing this line to "@storybook/preset-create-react-app" fixes storybook build
+    {
+      name: 'storybook-preset-craco',
+      options: {
+        cracoConfigFile: path.join(__dirname, 'craco.storybook.config.js'),
+      },
+    },
   ],
   "framework": "@storybook/react",
   "core": {
